@@ -13,7 +13,7 @@ Electrocardiogram (ECG) analysis is crucial for diagnosing cardiac conditions, b
 ### Goal
 
 The primary goal is to:
-1. Develop and compare multiple ML/DL algorithms (Random Forest, XGBoost, CNN, LSTM) for multi-class ECG classification
+1. Develop and compare multiple ML/DL algorithms (Random Forest, XGBoost) for multi-class ECG classification
 2. Implement comprehensive data preprocessing and feature engineering for 12-lead ECG signals
 3. Perform time series analysis and signal decomposition
 4. Optimize models through hyperparameter tuning and handle class imbalance
@@ -51,7 +51,7 @@ intro_ai_ml_aai501/
 | Team Member | Primary Responsibilities | Project Parts |
 |-------------|-------------------------|---------------|
 | **Ashok Bhairwal** | • Data preprocessing and cleaning<br>• Exploratory data analysis (EDA)<br>• Time series decomposition<br>• Technical paper writing<br>• Repository management and documentation | PART 1, PART 4 |
-| **Diaesh Antony** | • Baseline model implementation (Logistic Reg, RF, Decision Tree)<br>• Advanced model development (XGBoost, CNN, LSTM)<br>• Hyperparameter tuning and optimization<br>• Model training and validation<br>• Peer evaluation coordination | PART 2, PART 4 |
+| **Diaesh Antony** | • Baseline model implementation (Logistic Reg, RF, Decision Tree)<br>• Advanced model development (XGBoost)<br>• Hyperparameter tuning and optimization<br>• Model training and validation<br>• Peer evaluation coordination | PART 2, PART 4 |
 | **N L N Sai Krishna Akula** | • Model performance evaluation and diagnostics<br>• ROC-AUC and Precision-Recall analysis<br>• Feature importance and interpretability (SHAP, Grad-CAM)<br>• Comparative model analysis<br>• Technical paper writing | PART 3, PART 4 |
 
 ### Collaborative Responsibilities (All Members)
