@@ -44,7 +44,7 @@ We'll start with this same seven-label set on PTB-XL so our results are directly
 ## 📁 Repository Directory Structure
 
 ```
-intro_ai_ml_aai501/
+ECG-Arrhythmia-Classification-Team-Project/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -52,10 +52,10 @@ intro_ai_ml_aai501/
 ├── data/
 │   ├── raw/                      # Unmodified PTB-XL source files (not committed — see .gitignore)
 │   └── processed/                # Cleaned / resampled / feature-engineered data
-├── 01_Data_Prepare_EDA/              # Data cleaning + exploratory data analysis
-├── 02_Model_Selection_n_Building/            # Feature engineering, baseline model, advanced model
-├── 03_Model_Diagnostics/ # Intra- vs inter-patient diagnostics, ROC/AUC, confusion matrices
-└── 04_Final/            # Final end-to-end notebook, technical paper, presentation
+├── 01_Data_Prep_EDA/              # Data cleaning + exploratory data analysis
+├── 02_Model_Selection/            # Feature engineering, baseline model, advanced model
+├── 03_Model_Analysis_Diagnostics/ # Intra- vs inter-patient diagnostics, ROC/AUC, confusion matrices
+└── 04_Master_Pipeline/            # Final end-to-end notebook, technical paper, presentation
 ```
 
 Each folder will hold its own notebook(s) and finished report files as the project moves forward.
@@ -66,10 +66,10 @@ Each folder will hold its own notebook(s) and finished report files as the proje
 
 | Folder Subsystem                     | Owner(s)                                                  | Milestone                                  | Target Date |
 | ------------------------------------- | ----------------------------------------------------------- | ------------------------------------------- | ----------- |
-| **`01_Data_Prepare_EDA/`**               | Ashok Bhairwal                                              | Data Cleaning & EDA                         | Jul 26      |
-| **`02_Model_Selection_n_Building/`**             | Diaesh Antony                                                | Baseline Model + Advanced Model / Tuning    | Aug 01      |
-| **`03_Model_Diagnostics/`**  | N L N Sai Krishna Akula                                      | Model Diagnostics & Comparative Analysis    | Aug 05      |
-| **`04_Final/`**             | Joint (Ashok Bhairwal, N L N Sai Krishna Akula, Diaesh Antony) | Technical Paper, Final Notebook, Video      | Aug 08–10   |
+| **`01_Data_Prep_EDA/`**               | Ashok Bhairwal                                              | Data Cleaning & EDA                         | Jul 26      |
+| **`02_Model_Selection/`**             | Diaesh Antony                                                | Baseline Model + Advanced Model / Tuning    | Aug 01      |
+| **`03_Model_Analysis_Diagnostics/`**  | N L N Sai Krishna Akula                                      | Model Diagnostics & Comparative Analysis    | Aug 05      |
+| **`04_Master_Pipeline/`**             | Joint (Ashok Bhairwal, N L N Sai Krishna Akula, Diaesh Antony) | Technical Paper, Final Notebook, Video      | Aug 08–10   |
 
 ---
 
