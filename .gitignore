@@ -1,0 +1,23 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environments
+venv/
+.venv/
+env/
+
+# OS
+.DS_Store
+
+# Raw dataset (large, downloaded locally, not versioned)
+data/raw/*
+!data/raw/.gitkeep
+
+# Large processed artifacts (adjust as needed once notebooks are added)
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# Jupyter
+*.ipynb_checkpoints
