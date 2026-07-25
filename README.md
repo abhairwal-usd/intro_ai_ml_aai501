@@ -81,6 +81,45 @@ Each folder will hold its own notebook(s) and finished report files as the proje
 - **Access:** Free and open — no application needed, just download it from PhysioNet
 - **Note:** The raw files are large, so we don't upload them to this repo (see `.gitignore`). Download them yourself and put them in `data/raw/`.
 
+### Downloading the Dataset
+
+We provide a Python script to download the PTB-XL dataset from PhysioNet: `download_ptbxl.py`
+
+**1. Install required packages:**
+```bash
+pip install beautifulsoup4 requests
+```
+
+**2. Download options:**
+
+```bash
+# Download first 100 patients (for quick testing)
+python download_ptbxl.py --sample 100
+
+# Download only metadata files (CSV files, no ECG data)
+python download_ptbxl.py --metadata
+
+# Download 100Hz records only (recommended for this project)
+python download_ptbxl.py --records100
+
+# Download complete dataset (all 21,799 patients, ~1.7 GB)
+python download_ptbxl.py --all
+```
+
+**3. What gets downloaded:**
+- **Metadata files:** `ptbxl_database.csv`, `scp_statements.csv`
+- **ECG records:** `.dat` and `.hea` files
+  - `_lr.dat` - Low Resolution (100 Hz) - recommended, smaller files
+  - `_hr.dat` - High Resolution (500 Hz) - optional, 5x larger
+- **Output location:** `data/raw/physionet.org/files/ptb-xl/1.0.3/`
+
+**4. Understanding the files:**
+- **_lr.dat** (Low Resolution): 100 Hz sampling rate, ~10-12 KB per patient
+- **_hr.dat** (High Resolution): 500 Hz sampling rate, ~50-60 KB per patient
+- **.hea** (Header): Metadata for each .dat file
+
+**Recommendation:** Use 100 Hz data (_lr.dat) for faster processing and sufficient accuracy for ML classification.
+
 ## 📄 Reference Paper
 
 Sadiq, M. T., et al. (2025). *Cardiac Arrhythmia Classification From Lead I ECG Recorded in a Free-Living Environment.* IEEE Journal of Biomedical and Health Informatics. https://ieeexplore.ieee.org/document/11259110
