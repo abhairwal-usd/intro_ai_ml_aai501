@@ -1,0 +1,37 @@
+{
+  "NORM": {
+    "positive_weight": 1.073849178811011,
+    "negative_weight": 0.9356545399576741,
+    "positive_samples": 8646,
+    "negative_samples": 9923,
+    "imbalance_ratio": 1.1476983576220217
+  },
+  "MI": {
+    "positive_weight": 2.1333869485294117,
+    "negative_weight": 0.6530562003235563,
+    "positive_samples": 4352,
+    "negative_samples": 14217,
+    "imbalance_ratio": 3.2667738970588234
+  },
+  "STTC": {
+    "positive_weight": 2.2153424003817705,
+    "negative_weight": 0.6457434970093198,
+    "positive_samples": 4191,
+    "negative_samples": 14378,
+    "imbalance_ratio": 3.430684800763541
+  },
+  "CD": {
+    "positive_weight": 2.333961789844143,
+    "negative_weight": 0.6363169076828181,
+    "positive_samples": 3978,
+    "negative_samples": 14591,
+    "imbalance_ratio": 3.6679235796882854
+  },
+  "HYP": {
+    "positive_weight": 4.2530920751259735,
+    "negative_weight": 0.5666117417307458,
+    "positive_samples": 2183,
+    "negative_samples": 16386,
+    "imbalance_ratio": 7.506184150251947
+  }
+}
