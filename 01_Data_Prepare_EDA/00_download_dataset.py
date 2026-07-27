@@ -8,19 +8,17 @@ import os
 import urllib.request
 import zipfile
 from pathlib import Path
-from tqdm import tqdm
 
 # Configuration
 DATASET_URL = "https://physionet.org/static/published-projects/ptb-xl/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3.zip"
 DATA_DIR = Path("../data/raw")
 EXTRACT_DIR = DATA_DIR / "ptb-xl"
 
-class DownloadProgressBar(tqdm):
-    """Progress bar for download"""
-    def update_to(self, b=1, bsize=1, tsize=None):
-        if tsize is not None:
-            self.total = tsize
-        self.update(b * bsize - self.n)
+def reporthook(count, block_size, total_size):
+    """Simple progress reporting"""
+    percent = int(count * block_size * 100 / total_size)
+    if count % 100 == 0:  # Update every 100 blocks
+        print(f"\rDownload progress: {percent}%", end='', flush=True)
 
 def download_dataset():
     """Download PTB-XL dataset from PhysioNet"""
@@ -40,9 +38,8 @@ def download_dataset():
     print(f"Size: ~1.7 GB - This may take several minutes...")
 
     try:
-        with DownloadProgressBar(unit='B', unit_scale=True, miniters=1, desc="Downloading") as t:
-            urllib.request.urlretrieve(DATASET_URL, zip_path, reporthook=t.update_to)
-        print(f"\nDownload complete! Saved to {zip_path}")
+        urllib.request.urlretrieve(DATASET_URL, zip_path, reporthook=reporthook)
+        print(f"\n\nDownload complete! Saved to {zip_path}")
         return zip_path
     except Exception as e:
         print(f"Error: {e}")
@@ -66,8 +63,14 @@ def extract_dataset(zip_path):
     print(f"\nExtracting to {EXTRACT_DIR}...")
     try:
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            for file in tqdm(zip_ref.namelist(), desc="Extracting"):
+            files = zip_ref.namelist()
+            total = len(files)
+            for i, file in enumerate(files):
+                if i % 100 == 0:  # Update every 100 files
+                    percent = int((i / total) * 100)
+                    print(f"\rExtracting: {percent}% ({i}/{total} files)", end='', flush=True)
                 zip_ref.extract(file, EXTRACT_DIR)
+            print(f"\rExtracting: 100% ({total}/{total} files)")  # Final update
 
         # Move nested files up
         nested = EXTRACT_DIR / "ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3"
