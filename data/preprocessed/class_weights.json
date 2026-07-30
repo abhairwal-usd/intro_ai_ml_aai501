@@ -1,37 +1,51 @@
 {
-  "NORM": {
-    "positive_weight": 1.073849178811011,
-    "negative_weight": 0.9356545399576741,
-    "positive_samples": 8646,
-    "negative_samples": 9923,
-    "imbalance_ratio": 1.1476983576220217
+  "NSR": {
+    "positive_weight": 0.6508334827029933,
+    "negative_weight": 2.1574569221628046,
+    "positive_samples": 16737,
+    "negative_samples": 5049,
+    "imbalance_ratio": 3.314913844325609
   },
-  "MI": {
-    "positive_weight": 2.1333869485294117,
-    "negative_weight": 0.6530562003235563,
-    "positive_samples": 4352,
-    "negative_samples": 14217,
-    "imbalance_ratio": 3.2667738970588234
+  "AFb_AFl": {
+    "positive_weight": 6.9426386233269595,
+    "negative_weight": 0.5388039768511649,
+    "positive_samples": 1569,
+    "negative_samples": 20217,
+    "imbalance_ratio": 12.885277246653919
   },
-  "STTC": {
-    "positive_weight": 2.2153424003817705,
-    "negative_weight": 0.6457434970093198,
-    "positive_samples": 4191,
-    "negative_samples": 14378,
-    "imbalance_ratio": 3.430684800763541
+  "1AV": {
+    "positive_weight": 13.736443883984867,
+    "negative_weight": 0.5188872481303292,
+    "positive_samples": 793,
+    "negative_samples": 20993,
+    "imbalance_ratio": 26.472887767969734
   },
-  "CD": {
-    "positive_weight": 2.333961789844143,
-    "negative_weight": 0.6363169076828181,
-    "positive_samples": 3978,
-    "negative_samples": 14591,
-    "imbalance_ratio": 3.6679235796882854
+  "PAC": {
+    "positive_weight": 27.36934673366834,
+    "negative_weight": 0.5093042827753881,
+    "positive_samples": 398,
+    "negative_samples": 21388,
+    "imbalance_ratio": 53.73869346733668
   },
-  "HYP": {
-    "positive_weight": 4.2530920751259735,
-    "negative_weight": 0.5666117417307458,
-    "positive_samples": 2183,
-    "negative_samples": 16386,
-    "imbalance_ratio": 7.506184150251947
+  "PVC": {
+    "positive_weight": 9.530183727034121,
+    "negative_weight": 0.5276849295160587,
+    "positive_samples": 1143,
+    "negative_samples": 20643,
+    "imbalance_ratio": 18.060367454068242
+  },
+  "BRADY": {
+    "positive_weight": 17.100470957613815,
+    "negative_weight": 0.5150598137027755,
+    "positive_samples": 637,
+    "negative_samples": 21149,
+    "imbalance_ratio": 33.20094191522763
+  },
+  "TACHY": {
+    "positive_weight": 13.187651331719128,
+    "negative_weight": 0.5197041984732824,
+    "positive_samples": 826,
+    "negative_samples": 20960,
+    "imbalance_ratio": 25.375302663438255
   }
 }

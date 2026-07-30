@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af8daaba223cb87f45a3f80c9d2f8e442c13116da142e9d69d85a63026d1bc2a
-size 394
+label,positive_count,negative_count,total_count,positive_percent,negative_percent,imbalance_ratio,positive_weight,negative_weight
+NSR,16737,5049,21786,76.82,23.18,3.31,0.6508,2.1575
+AFb_AFl,1569,20217,21786,7.2,92.8,12.89,6.9426,0.5388
+1AV,793,20993,21786,3.64,96.36,26.47,13.7364,0.5189
+PAC,398,21388,21786,1.83,98.17,53.74,27.3693,0.5093
+PVC,1143,20643,21786,5.25,94.75,18.06,9.5302,0.5277
+BRADY,637,21149,21786,2.92,97.08,33.2,17.1005,0.5151
+TACHY,826,20960,21786,3.79,96.21,25.38,13.1877,0.5197
