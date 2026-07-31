@@ -55,10 +55,12 @@ intro_ai_ml_aai501/
 ├── data/
 │   ├── raw/                       # Raw PTB-XL source files -- NOT committed, download-only (see .gitignore)
 │   │   └── physionet.org/files/ptb-xl/1.0.3/   # <- scripts/download_ptbxl.py writes here; the notebooks read from here
-│   ├── preprocessed/              # Cleaning/EDA outputs from 01_Data_Prepare_EDA (committed via Git LFS)
+│   ├── preprocessed/              # Cleaning/EDA outputs from 01_Data_Prepare_EDA + model_features.csv from 02_Model_Selection (committed via Git LFS)
 │   └── sample_ecg/                # 100 real ECGs bundled for smoke-testing only -- see data/sample_ecg/README.md
 ├── 01_Data_Prepare_EDA/           # Data cleaning + exploratory data analysis
 ├── 02_Model_Selection/            # Feature engineering, baseline model, advanced model
+│   ├── 01_feature_engineering.ipynb   # Lead I signal features + metadata encoding -> data/preprocessed/model_features.csv
+│   └── 02_model_training.ipynb        # Baseline (Random Forest) vs advanced (XGBoost) model comparison
 ├── 03_Model_Diagnostics/          # Intra- vs inter-patient diagnostics, ROC/AUC, confusion matrices
 └── 04_Master_Pipeline/            # Final end-to-end notebook, technical paper, presentation
 ```
