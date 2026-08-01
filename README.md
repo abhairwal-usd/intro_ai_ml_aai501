@@ -58,11 +58,14 @@ intro_ai_ml_aai501/
 │   ├── preprocessed/              # Cleaning/EDA outputs from 01_Data_Prepare_EDA + model_features.csv from 02_Model_Selection (committed via Git LFS)
 │   └── sample_ecg/                # 100 real ECGs bundled for smoke-testing only -- see data/sample_ecg/README.md
 ├── 01_Data_Prepare_EDA/           # Data cleaning + exploratory data analysis
+│   └── 01_data_exploration.ipynb  #   Data cleaning, missing value imputation & CARE-I EDA
 ├── 02_Model_Selection/            # Feature engineering, baseline model, advanced model
-│   ├── 01_feature_engineering.ipynb   # Lead I signal features + metadata encoding -> data/preprocessed/model_features.csv
+│   ├── 01_feature_engineering.ipynb   # Lead-I signal features + metadata encoding -> data/preprocessed/model_features.csv
 │   └── 02_model_training.ipynb        # Baseline (Random Forest) vs advanced (XGBoost) model comparison
-├── 03_Model_Diagnostics/          # Intra- vs inter-patient diagnostics, ROC/AUC, confusion matrices
-└── 04_Master_Pipeline/            # Final end-to-end notebook, technical paper, presentation
+├── 03_Model_Diagnostics/          # Model Diagnostics & Validation
+│   └── Phase3_Model_Diagnostics_and_Validation.ipynb  # Threshold optimization, calibration, noise robustness, fairness & SHAP
+└── 04_Master_Pipeline/            # Master Pipeline Integration
+    └── 04_master_pipeline.ipynb   #   Complete end-to-end master project notebook (Phases 1-3 unified)
 ```
 
 Each folder holds its own notebook(s) and finished report files as the project moves forward.

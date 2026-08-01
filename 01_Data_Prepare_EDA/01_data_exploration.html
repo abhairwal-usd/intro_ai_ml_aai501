@@ -8455,7 +8455,7 @@ OK: Core identifier validation complete
 <h4 id="2c.-Remove-Duplicate-ECG-Records">2c. Remove Duplicate ECG Records<a class="anchor-link" href="#2c.-Remove-Duplicate-ECG-Records">¶</a></h4><p>PTB-XL intentionally contains <strong>multiple ECG recordings per patient</strong> (21,799
 recordings from 18,869 patients per Wagner et al. 2020 and the anchor paper's
 dataset description) -- these are separate clinical visits, not duplicates.
-Collapsing to one row per patient (as an earlier version of this notebook did)
+Collapsing to one row per patient
 is not duplicate removal: it silently discards ~15% of legitimate recordings
 and shrinks the dataset well below the size the paper and this project's
 README report.</p>
@@ -9294,11 +9294,7 @@ statement codes (not the <code>diagnostic_class</code> column used below, which 
 cover most of these codes at all).</p>
 <p><strong>This 7-label scheme (<code>superclass_labels</code>) is the primary target used for the
 rest of this notebook</strong>, so results are directly comparable to the anchor
-paper. An earlier version of this notebook used PTB-XL's 5 generic
-<strong>diagnostic superclasses</strong> (<code>NORM</code>, <code>MI</code>, <code>STTC</code>, <code>CD</code>, <code>HYP</code>) instead --
-those are kept below as a secondary/reference set (<code>diagnostic_superclass_labels</code>)
-since they're still useful context, but they are <em>not</em> the labels the paper
-reports results on.</p>
+paper. PTB-XL's 5 generic diagnostic superclasses (NORM, MI, STTC, CD, HYP) are retained as a secondary reference set (diagnostic_superclass_labels).</p>
 <p><strong>Multi-label</strong>: a single ECG can carry more than one label in either scheme.</p>
 </div>
 </div>
