@@ -49,14 +49,17 @@ intro_ai_ml_aai501/
 ├── requirements.txt
 ├── .gitignore
 ├── .gitattributes
+├── AAI-501-final-project-presentation-team-1.pptx  # Final Project Presentation Slides
+├── AAI-501-project-report-team-1.pdf            # Final Project Technical Report (PDF)
 ├── scripts/                       # Standalone utility scripts
-│   ├── download_ptbxl.py          #   Downloads the raw PTB-XL dataset from PhysioNet (see below)
-│   └── show_ecg_data.py           #   Quick viewer/sanity-check for a downloaded ECG record
+│   ├── download_ptbxl.py          #   Downloads raw PTB-XL dataset from PhysioNet
+│   ├── merge_all_phases.py        #   Master notebook merge script
+│   └── show_ecg_data.py           #   Quick viewer/sanity-check for ECG records
 ├── data/
-│   ├── raw/                       # Raw PTB-XL source files -- NOT committed, download-only (see .gitignore)
-│   │   └── physionet.org/files/ptb-xl/1.0.3/   # <- scripts/download_ptbxl.py writes here; the notebooks read from here
-│   ├── preprocessed/              # Cleaning/EDA outputs from 01_Data_Prepare_EDA + model_features.csv from 02_Model_Selection (committed via Git LFS)
-│   └── sample_ecg/                # 100 real ECGs bundled for smoke-testing only -- see data/sample_ecg/README.md
+│   ├── raw/                       # Raw PTB-XL source files (download-only)
+│   │   └── physionet.org/files/ptb-xl/1.0.3/
+│   ├── preprocessed/              # Cleaning/EDA outputs + model_features.csv
+│   └── sample_ecg/                # 100 real ECGs bundled for smoke-testing
 ├── 01_Data_Prepare_EDA/           # Data cleaning + exploratory data analysis
 │   └── 01_data_exploration.ipynb  #   Data cleaning, missing value imputation & CARE-I EDA
 ├── 02_Model_Selection/            # Feature engineering, baseline model, advanced model
@@ -65,7 +68,9 @@ intro_ai_ml_aai501/
 ├── 03_Model_Diagnostics/          # Model Diagnostics & Validation
 │   └── Phase3_Model_Diagnostics_and_Validation.ipynb  # Threshold optimization, calibration, noise robustness, fairness & SHAP
 └── 04_Master_Pipeline/            # Master Pipeline Integration
-    └── 04_master_pipeline.ipynb   #   Complete end-to-end master project notebook (Phases 1-3 unified)
+    ├── 04_master_pipeline.ipynb   #   Complete end-to-end master project notebook (Phases 1-3 unified)
+    ├── 04_master_pipeline.pdf     #   Master pipeline report (PDF export)
+    └── 04_master_pipeline.html    #   Master pipeline report (HTML export)
 ```
 
 Each folder holds its own notebook(s) and finished report files as the project moves forward.
